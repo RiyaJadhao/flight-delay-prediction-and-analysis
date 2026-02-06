@@ -1,5 +1,4 @@
 ✈️ **Flight Delay Prediction & Analysis System**
-📌 Project Overview
 
 Flight delays cause significant inconvenience to passengers and operational challenges for airlines.
 This project focuses on predicting whether a flight will be delayed or on time using historical flight data and machine learning techniques. In addition to prediction, the system provides AI-based explanations to help users understand the factors influencing the result.
