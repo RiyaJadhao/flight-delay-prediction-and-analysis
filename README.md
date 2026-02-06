@@ -1,24 +1,24 @@
-✈️ Flight Delay Prediction & Analysis System
+✈️ **Flight Delay Prediction & Analysis System**
+📌 Project Overview
 
-Flight delays cause significant inconvenience to passengers and financial loss to airlines.
-This project aims to predict whether a flight will be delayed or on time using historical flight data and machine learning, and to explain the prediction using AI-based insights.
+Flight delays cause significant inconvenience to passengers and operational challenges for airlines.
+This project focuses on predicting whether a flight will be delayed or on time using historical flight data and machine learning techniques. In addition to prediction, the system provides AI-based explanations to help users understand the factors influencing the result.
 
 The system combines:
 
-A Random Forest machine learning model for prediction
+A Random Forest machine learning model for delay prediction
 
 A Streamlit web interface for user interaction
 
-Gemini (LLM) to generate human-readable explanations for predictions
+Gemini (LLM) to generate clear, human-readable explanations
 
 🎯 Problem Statement
 
-Airlines and passengers often lack early insights into potential flight delays.
-The goal of this project is to:
+Airlines and passengers often lack early visibility into potential flight delays. This project aims to:
 
 Predict flight delays based on historical patterns
 
-Identify key factors influencing delays
+Identify key factors that influence delays
 
 Provide interpretable and user-friendly predictions
 
@@ -42,58 +42,55 @@ Delay status (target variable)
 
 🔍 Exploratory Data Analysis (EDA)
 
-EDA was performed to understand:
+Exploratory Data Analysis was performed to understand:
 
-Delay distribution across airlines
+Delay distribution across different airlines
 
-Peak hour vs non-peak hour delays
+Comparison of peak-hour vs non-peak-hour delays
 
-Weekend vs weekday delay patterns
+Weekend vs weekday delay trends
 
 Class imbalance in delay labels
 
-Key observations from EDA were used to guide feature engineering.
+Insights from EDA were used to guide feature selection and feature engineering.
 
 ⚙️ Feature Engineering
 
-To improve model performance and reflect real-world conditions, the following features were created:
+To improve model performance and capture real-world patterns, the following features were created:
 
 is_weekend
 
-Identifies whether the flight occurs on a weekend
+Indicates whether the flight occurs on a weekend
 
-Captures higher congestion patterns on weekends
+Helps capture higher congestion and travel volume on weekends
 
 is_peak_hour
 
 Identifies rush-hour departure times
 
-Captures airport traffic congestion effects
+Captures airport traffic and congestion effects
 
 Categorical Encoding
 
-Airline, origin, and destination were encoded using saved encoders
+Airline, origin, and destination features were encoded using saved encoders
 
-🤖 Model Used
-Random Forest Classifier
+Ensures consistency between training and prediction stages
 
-An ensemble learning algorithm
+🤖 Model Used – Random Forest Classifier
 
-Combines predictions from multiple decision trees
-
-Reduces overfitting and improves accuracy
+The Random Forest Classifier is an ensemble learning algorithm that combines predictions from multiple decision trees to produce a more reliable result.
 
 Why Random Forest?
 
-Handles non-linear relationships well
+Handles non-linear relationships effectively
 
-Robust to noise
+Robust to noise and overfitting
 
-Provides stable performance on structured data
+Performs well on structured tabular data
 
 🧪 Model Evaluation
 
-The model was evaluated using unseen test data:
+The model was evaluated using unseen test data with the following metrics:
 
 Accuracy
 
@@ -101,13 +98,15 @@ Confusion Matrix
 
 ROC Curve
 
-These metrics helped assess classification performance and error distribution.
+These metrics helped assess overall performance, class-wise prediction quality, and model reliability.
 
 🖥️ Streamlit User Interface
 
-A Streamlit app was developed to allow users to:
+A Streamlit application was developed to make the model easily accessible.
 
-Enter flight details (airline, route, date, time)
+Users can:
+
+Enter flight details (airline, route, date, and time)
 
 Get instant delay predictions
 
@@ -115,19 +114,19 @@ View prediction confidence
 
 Read AI-generated explanations
 
-Run locally using:
+Run the application locally using:
 
 streamlit run app.py
 
 🧠 AI-Based Explanation (Gemini)
 
-Gemini is integrated to:
+Gemini is integrated to improve interpretability by:
 
-Convert numerical predictions into natural language explanations
+Converting numerical predictions into natural language explanations
 
-Highlight factors influencing the delay
+Highlighting key factors influencing the prediction
 
-Improve transparency and user trust
+Increasing transparency and user trust
 
 Example:
 
@@ -147,11 +146,11 @@ Model training (Random Forest)
 
 Model evaluation
 
-Saving model and encoders
+Saving trained model and encoders
 
 Streamlit deployment
 
-Prediction and AI explanation
+Prediction and AI-based explanation
 
 🛠️ Technologies Used
 
@@ -167,28 +166,28 @@ Streamlit
 
 Google Gemini (LLM)
 
-Google Colab (model training & EDA)
+Google Colab (model training and EDA)
 
 🚧 Challenges Faced
 
-Handling categorical data during prediction
+Handling categorical variables during prediction
 
-Managing class imbalance
+Managing class imbalance in the dataset
 
-Encoding consistency between training and inference
+Maintaining encoding consistency between training and inference
 
-Large model files during GitHub push
+Handling large model files during GitHub pushes
 
-These issues were resolved using proper preprocessing, saved encoders, and .gitignore configuration.
+These challenges were addressed using proper preprocessing, saved encoders, and .gitignore configuration.
 
 🚀 Future Enhancements
 
 Cloud deployment (AWS / Streamlit Cloud)
 
-Real-time weather and flight API integration
+Integration with real-time weather and flight APIs
 
-Model retraining automation
+Automated model retraining
 
-Batch flight predictions
+Batch flight delay predictions
 
 Advanced explainability dashboards
